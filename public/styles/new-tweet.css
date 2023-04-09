@@ -1,0 +1,36 @@
+.new-tweet {
+  width: 100%;
+  padding: 20px;
+
+  font-weight: bold;
+}
+
+button {
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: "Bungee";
+}
+
+.counter {
+  font-family: "Bungee";
+  align-items: center;
+}
+#tweet-text {
+  width: 100%;
+  border-style: none;
+  background-color: #e1dcd3;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  resize: none;
+  display: block;
+  font-family: "Source Sans Pro";
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.button-output {
+  display: flex;
+  justify-content: space-between;
+}
