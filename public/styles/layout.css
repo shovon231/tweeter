@@ -30,3 +30,52 @@ body {
   width: 90%;
   margin: auto;
 }
+
+article.tweet {
+  margin: 10px;
+  border-style: solid;
+  padding: 25px;
+  background: #f4f1ec;
+}
+article.tweet header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.divwithimg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+article.tweet p {
+  padding: 10px;
+  padding-bottom: 30px;
+  border-bottom: solid 3px;
+  border-color: #545149;
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+.fa-flag:hover {
+  color: rgb(199, 199, 88);
+}
+
+.fa-retweet:hover {
+  color: rgb(199, 199, 88);
+}
+.fa-heart:hover {
+  color: rgb(199, 199, 88);
+}
