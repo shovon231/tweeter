@@ -5,7 +5,8 @@ $(document).ready(function () {
     //console.log(counter - $(this).$.trim(val()).length);
     let textVal = counter - $(this).val().length;
     //$(this.document).text(textVal);
-    let selectOutput = $(this).parent().children("div").children("output");
+    let selectOutput = $("#tweet-text, .counter"); //.parent().children("div").children("output");
+
     $(selectOutput).text(textVal);
     if (textVal <= 0) {
       $(selectOutput).addClass("red");
@@ -14,3 +15,7 @@ $(document).ready(function () {
     }
   });
 });
+
+(marks >= 40) ? 'pass' : 'fail';
+
+//
