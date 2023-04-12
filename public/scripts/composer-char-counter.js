@@ -16,6 +16,4 @@ $(document).ready(function () {
   });
 });
 
-(marks >= 40) ? 'pass' : 'fail';
 
-//
