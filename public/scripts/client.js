@@ -10,15 +10,15 @@ const createTweetElement = (tweet) => {
   <header>
     <div class="divwithimg">
       <img src="${tweet.user.avatars}" alt="user img" />
-      <div>${tweet.user.name}</div>
+      <div>${tweetEscape(tweet.user.name)}</div>
     </div>
-    <div>${tweet.user.handle}</div>
+    <div>${tweetEscape(tweet.user.handle)}</div>
   </header>
       <p>
-        ${tweet.content.text}
+        ${tweetEscape(tweet.content.text)}
       </p>
   <footer>
-    <div>${timeago.format(tweet.created_at.now - 11 * 1000 * 60 * 60)}</div>
+    <div>${tweetEscape(timeago.format(tweet.created_at))}</div>
     <div class="icons">
       <i class="fa-solid fa-flag"></i>
       <i class="fa-solid fa-retweet"></i>
@@ -28,7 +28,7 @@ const createTweetElement = (tweet) => {
 </article>`);
   return $tweet;
 };
-
+//.now - 11 * 1000 * 60 * 60
 //function for loop through the data array
 const renderTweets = (data) => {
   let $tweet;
@@ -62,7 +62,12 @@ const loadTweets = () => {
     },
   });
 };
-//loadTweets();
+//escape function
+const tweetEscape = (str) => {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 //define the post and get method
 $(document).ready(() => {
