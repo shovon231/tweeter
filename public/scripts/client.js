@@ -29,73 +29,51 @@ const createTweetElement = (tweet) => {
   return $tweet;
 };
 
-//format(Date.now() - 11 * 1000 * 60 * 60); // returns '11 hours ago'
 //function for loop through the data array
 const renderTweets = (data) => {
   let $tweet;
   // loops through tweets
+  $("#tweets-container").empty();
   for (const tweetData of data) {
     // calls createTweetElement for each tweet
     $tweet = createTweetElement(tweetData);
-    $("#tweets-container").append($tweet);
+    $("#tweets-container").prepend($tweet);
   }
 };
+//check the tweet length
+const tweetLengthCheck = (msg) => {
+  //console.log(msg);
+  if (!msg) {
+    alert("empty tweet.");
+  } else if (msg > 140) {
+    alert("Bigggg tweet not allowed! Tweet limit 140");
+  } else {
+    return true;
+  }
+};
+//define loadtweet function
+const loadTweets = () => {
+  $("#tweet-text").val("");
+  $(".counter").val(140);
+  $.ajax({
+    url: "http://localhost:8080/tweets",
+    success: (res) => {
+      renderTweets(res);
+    },
+  });
+};
+//loadTweets();
+
 //define the post and get method
 $(document).ready(() => {
   //renderTweets(data);
-
+  loadTweets();
   $("form").submit((event) => {
     event.preventDefault();
-    const $tweetTxt = $("#tweet-text").serialize();
+    let msg = $("#tweet-text").val().length;
+    if (tweetLengthCheck(msg)) {
+      const $tweetTxt = $("#tweet-text").serialize();
+      $.post("./tweets/", $tweetTxt).then(loadTweets);
+    }
   });
-  // const loadTweets = () => {
-  //   $.ajax("http://localhost:8080/tweets", { method: "GET" }).then(
-  //     (morepostjson) => {
-  //       renderTweets(morepostjson);
-  //     }
-  //   );
-  // };
-  const loadTweets = () => {
-    $.ajax({
-      url: "http://localhost:8080/tweets",
-      success: (res) => {
-        renderTweets(res);
-      },
-    });
-  };
-  loadTweets();
 });
-
-// $.ajax({
-//   // Target URL:
-//   url: 'https://ghibliapi.herokuapp.com/films/',
-//   // If successful, process the response:
-//   success: response => {
-//       let outputHTML = '<ul>';
-//       response.forEach(movie => outputHTML += `<li>${movie.title} (${movie.original_title})</li>`);
-//       outputString += '</ul>';
-//       $(document.body).append(outputHTML);
-//   },
-//   // If an error occurred, log the issue:
-//   error: error => {
-//       console.error(`Error Encountered: ${error.status} - ${error.statusText}`);
-//   }
-// });
-
-// const loadTweets = () => {
-//   $.ajax({
-//     url: "http://localhost:8080/tweets",
-//     success: (response) => {
-//       for (const tweetData of response) {
-//         // calls createTweetElement for each tweet
-//         $tweet = createTweetElement(tweetData);
-//         $("#tweets-container").append($tweet);
-//       }
-//     },
-//     error: (error) => {
-//       console.error(
-//         `Error Encountered: ${error.status} - ${error.statusText}`
-//       );
-//     },
-//   });
-// };
