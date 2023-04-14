@@ -2,17 +2,52 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This application allow user to share their thoughts with their friends.
 
 ## Getting Started
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+==> Clone this repo: gh repo clone shovon231/tweeter
+==> Install the required dependencies: npm install
+==> Start the application: npm start local
+==> Go to <http://localhost:8080/> in your browser.
+
+## How to use
+
+==> write your status
+==> click the tweet to let your friends know your status
+
+## Features
+
+### Error Messages
+
+==> Error message will pop up if user tries to send empty tweet.
+==> Error message will popup if user tries to tweet more than 140 char tweet.
+
+### Character Counter
+
+==> when user type on the news feed the char will count on the corner to let user know their limit.
+==> it also give an indication to the user if they cross 140 limit.
+
+### Tablet and Desktop Responsive Design
+
+==> it supports the mobile-device layout and desktop layout
+
+### Mouse-Over icon
+
+==> if user hover over the icon it changes the color
 
 ## Dependencies
 
 - Express
 - Node 5.10.x or above
+- Body-parser
+- md5 2.1.0 or above
+- Nodemon
+
+## Images
+
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/home.png)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error1.png)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error2.png)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/tweet.png)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/responsive.png)
