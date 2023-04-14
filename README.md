@@ -46,8 +46,8 @@ This application allow user to share their thoughts with their friends.
 
 ## Images
 
-!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/home.png)
-!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error1.png)
-!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error2.png)
-!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/tweet.png)
-!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/responsive.png)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/home.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error1.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/error2.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/tweet.png?raw=true)
+!["Screenshot of URLs page"](https://github.com/lighthouse-labs/tweeter/blob/master/docs/responsive.png?raw=true)
