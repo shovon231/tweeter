@@ -28,7 +28,6 @@ const createTweetElement = (tweet) => {
 </article>`);
   return $tweet;
 };
-//.now - 11 * 1000 * 60 * 60
 //function for loop through the data array
 const renderTweets = (data) => {
   let $tweet;
@@ -42,12 +41,14 @@ const renderTweets = (data) => {
 };
 //check the tweet length
 const tweetLengthCheck = (msg) => {
-  //console.log(msg);
   if (!msg) {
-    alert("empty tweet.");
+    $(".displayError").css("visibility", "visible");
+    $toggleError("Opps!!! you cannot post Empty tweet");
   } else if (msg > 140) {
-    alert("Bigggg tweet not allowed! Tweet limit 140");
+    $(".displayError").css("visibility", "visible");
+    $toggleError("Bigggg tweets are not allowed! Tweet limit 140");
   } else {
+    $(".displayError").css("visibility", "hidden");
     return true;
   }
 };
@@ -68,10 +69,15 @@ const tweetEscape = (str) => {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+//toggle error message
+const $toggleError = (message) => {
+  const $err = $(".displayError");
+  $err.slideUp();
+  if (message) $err.html(message).slideDown();
+};
 
 //define the post and get method
 $(document).ready(() => {
-  //renderTweets(data);
   loadTweets();
   $("form").submit((event) => {
     event.preventDefault();
