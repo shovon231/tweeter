@@ -46,8 +46,17 @@ This application allow user to share their thoughts with their friends.
 
 ## Images
 
-!["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/home.png?raw=true)
+==> Home Page
+!["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/Home1.png?raw=true)
+
+==> Error Display when tries to make empty tweet
 !["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/error1.png?raw=true)
+
+==> Error Display when tries to tweet more than 140 char
 !["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/error2.png?raw=true)
+
+==> Dispaly teh tweet
 !["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/tweet.png?raw=true)
+
+==> Responsivness
 !["Screenshot of URLs page"](https://github.com/shovon231/tweeter/blob/master/docs/responsive.png?raw=true)
