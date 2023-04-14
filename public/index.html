@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -64,7 +68,7 @@
       </div>
     </nav>
     <!-- header -->
-    <header>
+    <header id="head">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
@@ -76,6 +80,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="displayError" style="visibility: hidden"></div>
         <form action="/tweets" method="POST">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
